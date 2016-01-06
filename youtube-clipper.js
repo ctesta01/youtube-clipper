@@ -1,5 +1,6 @@
 function YouTubeClip() {
     var youtube_id = youtube_parser( document.getElementById("startURL").value );
+    var startsec = document.getElementById("
 }
 
 // Function taken from the following stackoverflow comment
@@ -9,4 +10,5 @@ function youtube_parser(url){
     var match = url.match(regExp);
     return (match&&match[7].length==11)? match[7] : false;
 }
+
 
