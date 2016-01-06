@@ -38,11 +38,11 @@
           <label id="newURLlabel" for="newURL" class="inactive">
             Your clipped URL:
           </label>
-          <input id="newURL" type="text" class="inactive" readonly="readonly" disabled="disabled" />
+          <input id="newURL" onclick="this.focus();this.select()" type="text" readonly="readonly" />
           <label id="newEmbedlabel" for="newEmbed" class="inactive">
             Your clipped embed code:
           </label>
-          <input id="newEmbed" type="text" class="inactive" readonly="readonly" disabled="disabled" />
+          <input id="newEmbed" onclick="this.focus();this.select()"  type="text" readonly="readonly" />
         </fieldset>
       </form>
     </div>
