@@ -1,46 +1,49 @@
 <!doctype html>
 <html>
   <head>
+    <title>YouTube Clipper - Embed Code and Link Generator</title>
+    <meta name="description" content="A simple way to create links and embed codes to YouTube videos with custom start and end times" />
     <link type="text/css" rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="youtube-clipper.js"></script>
   </head>
 
   <body>
     <div id="top">
-    <h1>YouTube Clipper</h1>
+      <h1>YouTube Clipper<br>
+     Embed Code and Link Generator</h1>
     </div>
 
     <div id="center">
-    <form>
-      <fieldset id="one">
-        <label for="startURL">Enter the originl YouTube URL here:
-        </label>
-        <input id="startURL" type="text" />
-      </fieldset>
+      <form>
+        <fieldset id="one">
+          <label for="startURL">Enter the originl YouTube URL here:
+          </label>
+          <input id="startURL" type="text" />
+        </fieldset>
 
-      <fieldset id="two">
-        <label>Choose a start time:</label>
-        <div id="timeBoxes">
-          <input id="startmin" type="text" value="min" maxlength="3" /> : <input id="startsec" type="text" value="sec" maxlength="4" />
-        </div>
-        <label>Choose an end time:</label>
-        <div id="timeBoxes">
-          <input id="endmin" type="text" value="min" maxlength="3" /> : <input id="endsec" type="text" value="sec" maxlength="4" />
-        </div>
-      </fieldset>
+        <fieldset id="two">
+          <label>Choose a start time:</label>
+          <div id="timeBoxes">
+            <input id="startmin" type="text" value="min" maxlength="3" /> : <input id="startsec" type="text" value="sec" maxlength="4" />
+          </div>
+          <label>Choose an end time:</label>
+          <div id="timeBoxes">
+            <input id="endmin" type="text" value="min" maxlength="3" /> : <input id="endsec" type="text" value="sec" maxlength="4" />
+          </div>
+        </fieldset>
 
-      <fieldset id="three">
-        <a id="getLink" href="#">Get Link and Embed Code</a>
-        <label id="newURLlabel" for="newURL" class="inactive">
-          Your clipped URL:
-        </label>
-        <input id="newURL" type="text" class="inactive" readonly="readonly" disabled="disabled" />
-        <label id="newEmbedlabel" for="newEmbed" class="inactive">
-          Your clipped embed code:
-        </label>
-        <input id="newEmbed" type="text" class="inactive" readonly="readonly" disabled="disabled" />
-      </fieldset>
-    </form>
+        <fieldset id="three">
+          <a id="getLink" href="#">Get Link and Embed Code</a>
+          <label id="newURLlabel" for="newURL" class="inactive">
+            Your clipped URL:
+          </label>
+          <input id="newURL" type="text" class="inactive" readonly="readonly" disabled="disabled" />
+          <label id="newEmbedlabel" for="newEmbed" class="inactive">
+            Your clipped embed code:
+          </label>
+          <input id="newEmbed" type="text" class="inactive" readonly="readonly" disabled="disabled" />
+        </fieldset>
+      </form>
     </div>
 
   </body>
