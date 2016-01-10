@@ -1,0 +1,13 @@
+body {
+    background-image: url("background.png");
+    background-repreat: repeat;
+}
+
+h1 {
+    font-family: "Courier New", Courier, "Andale Mono";
+    color: #7FDBFF;
+}
+
+#container {
+    background-color: rgba(0, 0, 0, 0.5);
+}

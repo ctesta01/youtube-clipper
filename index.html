@@ -9,44 +9,45 @@
   </head>
 
   <body>
-    <div id="top">
-      <h1>YouTube Clipper</h1>
+    <div id="container">
+      <div id="top">
+        <h1>YouTube Clipper</h1>
+      </div>
+
+      <div id="center">
+        <form id="form">
+          <fieldset id="one">
+            <label for="startURL">Enter the originl YouTube URL here:
+            </label>
+            <input id="startURL" type="text" />
+          </fieldset>
+
+          <fieldset id="two">
+            <label>Choose a start time:</label>
+            <div id="timeBoxes">
+              <input id="startmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="startsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
+            </div>
+            <label>Choose an end time:</label>
+            <div id="timeBoxes">
+              <input id="endmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="endsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
+            </div>
+            <input type="checkbox" id="autoplay" checked><label for="autoplay">Autoplay?</label></input>
+          </fieldset>
+
+          <fieldset id="three">
+            <button type="button" onclick="YouTubeClip()">Get Link and Embed Code</button>
+            <label id="newURLlabel" for="newURL" class="inactive">
+              Your clipped URL:
+            </label>
+            <input id="newURL" onclick="this.focus();this.select()" type="text" readonly="readonly" />
+            <label id="newEmbedlabel" for="newEmbed" class="inactive">
+              Your clipped embed code:
+            </label>
+            <input id="newEmbed" onclick="this.focus();this.select()"  type="text" readonly="readonly" />
+          </fieldset>
+        </form>
+      </div>
     </div>
-
-    <div id="center">
-      <form id="form">
-        <fieldset id="one">
-          <label for="startURL">Enter the originl YouTube URL here:
-          </label>
-          <input id="startURL" type="text" />
-        </fieldset>
-
-        <fieldset id="two">
-          <label>Choose a start time:</label>
-          <div id="timeBoxes">
-            <input id="startmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="startsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
-          </div>
-          <label>Choose an end time:</label>
-          <div id="timeBoxes">
-            <input id="endmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="endsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
-          </div>
-          <input type="checkbox" id="autoplay" checked><label for="autoplay">Autoplay?</label></input>
-        </fieldset>
-
-        <fieldset id="three">
-          <button type="button" onclick="YouTubeClip()">Get Link and Embed Code</button>
-          <label id="newURLlabel" for="newURL" class="inactive">
-            Your clipped URL:
-          </label>
-          <input id="newURL" onclick="this.focus();this.select()" type="text" readonly="readonly" />
-          <label id="newEmbedlabel" for="newEmbed" class="inactive">
-            Your clipped embed code:
-          </label>
-          <input id="newEmbed" onclick="this.focus();this.select()"  type="text" readonly="readonly" />
-        </fieldset>
-      </form>
-    </div>
-
   </body>
 
 
