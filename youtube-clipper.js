@@ -8,6 +8,7 @@ function YouTubeClip() {
   var endmin = parseInt(document.getElementById("endmin").value);
   var starttime = startmin * 60 + startsec;
   var endtime = endmin * 60 + endsec;
+  var autoplay = document.getElementById("autoplay").checked;
   
   // condition0: URL has a valid YouTube video ID
   // condition1: startsec is valid second value
@@ -40,7 +41,8 @@ function YouTubeClip() {
   // If invalid start time and valid end time,
   // append &end=endtime
   //
-  // Finally, append &autoplay=1, format embed code,
+  // Finally, if autoplay checkbox is checked append &autoplay=1, 
+  // create and format embed code,
   // and display results on screen
   if (condition0 && condition6) {
     finalURL += youtube_id;
@@ -55,7 +57,7 @@ function YouTubeClip() {
     } else if (condition3 && condition4) {
         finalURL += "&end=" + endtime;
     }
-    finalURL += "&autoplay=1";
+    if (autoplay) finalURL += "&autoplay=1";
     finalEmbed = "<iframe src=\"";
     finalEmbed += finalURL;
     finalEmbed += "\" frameborder=\"0\" allowfullscreen></iframe>"

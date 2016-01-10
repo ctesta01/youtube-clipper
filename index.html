@@ -10,8 +10,7 @@
 
   <body>
     <div id="top">
-      <h1>YouTube Clipper<br>
-     Embed Code and Link Generator</h1>
+      <h1>YouTube Clipper</h1>
     </div>
 
     <div id="center">
@@ -25,12 +24,13 @@
         <fieldset id="two">
           <label>Choose a start time:</label>
           <div id="timeBoxes">
-            <input id="startmin" type="text" value="min" maxlength="3" /> : <input id="startsec" type="text" value="sec" maxlength="4" />
+            <input id="startmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="startsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
           </div>
           <label>Choose an end time:</label>
           <div id="timeBoxes">
-            <input id="endmin" type="text" value="min" maxlength="3" /> : <input id="endsec" type="text" value="sec" maxlength="4" />
+            <input id="endmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="endsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
           </div>
+          <input type="checkbox" id="autoplay" checked><label for="autoplay">Autoplay?</label></input>
         </fieldset>
 
         <fieldset id="three">
