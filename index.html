@@ -17,36 +17,61 @@
       <div id="center">
         <form id="form">
           <fieldset id="one">
-            <label for="startURL">Enter the originl YouTube URL here:
-            </label>
+            <label for="startURL">Enter the original YouTube URL here:
+            </label><br>
             <input id="startURL" type="text" />
           </fieldset>
 
           <fieldset id="two">
-            <label>Choose a start time:</label>
-            <div id="timeBoxes">
-              <input id="startmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="startsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
-            </div>
-            <label>Choose an end time:</label>
-            <div id="timeBoxes">
-              <input id="endmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="endsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
-            </div>
-            <input type="checkbox" id="autoplay" checked><label for="autoplay">Autoplay?</label></input>
+            <table>
+              <tr>
+                <td>
+                  <label>Choose a start time:</label>
+                  <div id="timeBoxes">
+                    <input id="startmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="startsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
+                  </div>
+                </td>
+                <td>
+                  <label>Choose an end time:</label>
+                  <div id="timeBoxes">
+                    <input id="endmin" type="text" value="min" maxlength="3" onclick="this.focus();this.select()"/> : <input id="endsec" type="text" value="sec" maxlength="4" onclick="this.focus();this.select()"/>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <br>
+                  <input type="checkbox" id="autoplay" checked><label for="autoplay">Autoplay?</label></input><br><br>
+                  <button type="button" onclick="YouTubeClip()">Get Link and Embed Code</button>
+                </td>
+              </tr>
+            </table>
           </fieldset>
 
           <fieldset id="three">
-            <button type="button" onclick="YouTubeClip()">Get Link and Embed Code</button>
             <label id="newURLlabel" for="newURL" class="inactive">
               Your clipped URL:
-            </label>
-            <input id="newURL" onclick="this.focus();this.select()" type="text" readonly="readonly" />
+            </label><br>
+            <input id="newURL" onclick="this.focus();this.select()" type="text" readonly="readonly" /><br>
             <label id="newEmbedlabel" for="newEmbed" class="inactive">
               Your clipped embed code:
-            </label>
-            <input id="newEmbed" onclick="this.focus();this.select()"  type="text" readonly="readonly" />
+            </label><br>
+            <input id="newEmbed" onclick="this.focus();this.select()"  type="text" readonly="readonly" /><br>
           </fieldset>
         </form>
       </div>
+    </div>
+    <div id="bottom">
+	<h2>So what does this do?</h2>
+	<p>It creates YouTube URLs and embed codes with custom start and stop times</p>
+	<h2>What is this good for?</h2>
+	<ol type="A">
+		<li>Well, this is easier than remembering how to do it</li>
+		<li>And even if you can remember it, this is probably faster</li>
+		<li>Nobody likes doing math anyway, and converting minutes to seconds requires math</li>
+	</ol>
+	<h2>Other Projects</h2>
+    <p>I mean, feel free to check out <a href="http://ctesta.com">my website.</a></p>
     </div>
   </body>
 
