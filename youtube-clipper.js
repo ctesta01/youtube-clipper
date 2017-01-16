@@ -18,10 +18,10 @@ function YouTubeClip() {
   // condition5: end time is greater than start time
   // condition6: URL is valid YouTube URL
   var condition0 = youtube_id;
-  var condition1 = validator.isInt(startsec, {min: 0, max:59 });
-  var condition2 = validator.isInt(startmin, {min: 0, max:59 });
-  var condition3 = validator.isInt(endsec, {min: 0, max:59 });
-  var condition4 = validator.isInt(endmin, {min: 0, max:59 });
+  var condition1 = validator.isInt(String(startsec), {min: 0, max:59 });
+  var condition2 = validator.isInt(String(startmin), {min: 0, max:59 });
+  var condition3 = validator.isInt(String(endsec), {min: 0, max:59 });
+  var condition4 = validator.isInt(String(endmin), {min: 0, max:59 });
   var condition5 = endtime > starttime;
   var condition6 = validator.isURL(document.getElementById("startURL").value, {
     protocols: ['http','https'], 
