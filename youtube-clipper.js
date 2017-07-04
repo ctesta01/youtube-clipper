@@ -1,6 +1,6 @@
 function YouTubeClip() {
 
-  var finalURL = "http://youtube.com/v/";
+  var finalURL = "http://youtube.com/embed/";
   var youtube_id = youtube_parser(document.getElementById("startURL").value);
   var startsec = parseInt(document.getElementById("startsec").value);
   var startmin = parseInt(document.getElementById("startmin").value);
@@ -46,8 +46,9 @@ function YouTubeClip() {
   // and display results on screen
   if (condition0 && condition6) {
     finalURL += youtube_id;
+    finalURL += "/"
     if (condition1 && condition2) {
-        finalURL += "&start=" + starttime;
+        finalURL += "?start=" + starttime;
         if (condition3 && condition4) {
             if (condition5) {
             endtime = endmin * 60 + endsec;
